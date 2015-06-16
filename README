@@ -2,4 +2,7 @@ version 0.1 of timing rig
 
 simple rig to compile and run simple java programs
 
-initial commit
+While it is entierly possible to use the time command to time programs, I want to 
+use this as a sarting point for something more interesting.
+I want to turn this eventually into a scrpit to process a variety of languags and imput formats.
+allowing for files of paths to be found, compiled, ran and timed.
