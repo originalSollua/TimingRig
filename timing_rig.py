@@ -1,16 +1,24 @@
 # intending this to be a rig to hold a python script to run timing on other programs.
 # flags:
-# -r <n>: run the given program(s) n times. defaults to 1 if not used, 5 for -r with no value
 import os, sys
 
 print "welcome to timing rig v0.1"
-runs = 1
 arglist = sys.argv
 del arglist[0]
 
 path = arglist[-1]
 if not ".java" in path:
-    print "cats"
+    sys.exit("No .java file specified")
 else:
-    os.system("javac "+path)
+    var = os.system("javac "+path)
+    if not var == 0:
+        sys.exit("Invalid path to program")
+    print path
+    path = path[:-5]
+    print path
+    var = os.system("java "+path)
+    if not var == 0:
+        sys.exit(path +" could not be run.")
+    sys.exit(0)
+       
 
