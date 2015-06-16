@@ -16,12 +16,9 @@ else:
     print path
     path = path[:-5]
     print path
-    t = time.clock()
-    var = os.system("java "+path)
-    e = time.clock()
+    var = os.system("time java "+path)
     if not var == 0:
         sys.exit(path +" could not be run.")
-    print "Elapsd Execution time: "+str(e - t)+" Sec"
     sys.exit(0)
        
 
